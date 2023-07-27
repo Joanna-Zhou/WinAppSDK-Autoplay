@@ -15,6 +15,11 @@ namespace winrt::Autoplay::implementation
         void MyProperty(int32_t value);
 
         void myButton_Click(Windows::Foundation::IInspectable const& sender, Microsoft::UI::Xaml::RoutedEventArgs const& args);
+
+
+        typedef HRESULT(*CREATEHARDWAREEVENTMONIKER)(REFCLSID clsid, LPCWSTR pszEventHandler, IMoniker** ppmoniker);
+
+        HRESULT RegisterComponent(IUnknown* punk);
     };
 }
 
